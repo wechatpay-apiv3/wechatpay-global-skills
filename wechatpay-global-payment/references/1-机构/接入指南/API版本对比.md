@@ -166,18 +166,18 @@ V3 强制要求：
 
 | 接口 | V2 | V3 Global |
 |------|----|-----|
-| JSAPI 下单 | XML POST | `/v3/global/transactions/jsapi` |
-| Native 下单 | XML POST | `/v3/global/transactions/native` |
-| APP 下单 | XML POST | `/v3/global/transactions/app` |
-| H5 下单 | XML POST | `/v3/global/transactions/h5` |
-| 付款码支付 | ⚠️ 境外已 V3 化 | `/v3/global/transactions/micropay` |
-| 查单 | XML POST | `/v3/global/transactions/out-trade-no/{}` |
-| 关单 | XML POST | `/v3/global/transactions/out-trade-no/{}/close` |
-| 撤销 | XML POST | `/v3/global/transactions/out-trade-no/{}/reverse` |
-| 退款 | XML POST | `/v3/global/refund/domestic/refunds`（V3 退款路径） |
-| 退款查询 | XML POST | `/v3/global/refund/domestic/refunds/{out_refund_no}` |
-| 跨境分账 | ❌ 不支持 | `/v3/global/profit-sharing/orders` 等 |
-| 子商户进件 | XML POST | `/v3/global/applyment4sub/applyment/` |
+| JSAPI 下单 | XML POST `/pay/unifiedorder` | POST `/v3/global/transactions/jsapi` |
+| Native 下单 | XML POST `/pay/unifiedorder` | POST `/v3/global/transactions/native` |
+| APP 下单 | XML POST `/pay/unifiedorder` | POST `/v3/global/transactions/app` |
+| H5 下单 | XML POST `/pay/unifiedorder` | POST `/v3/global/transactions/h5` |
+| 付款码支付 | XML POST `/pay/micropay` | POST `/v3/global/transactions/micropay` |
+| 查单 | XML POST `/pay/orderquery` | GET `/v3/global/transactions/out-trade-no/{}` |
+| 关单 | XML POST `/pay/closeorder` | POST `/v3/global/transactions/out-trade-no/{}/close` |
+| 撤销 | XML POST `/secapi/pay/reverse` | POST `/v3/global/transactions/out-trade-no/{}/reverse` |
+| 退款 | XML POST `/secapi/pay/refund` | POST `/v3/global/refunds` |
+| 退款查询 | XML POST `/pay/refundquery` | GET `/v3/global/refunds/out-refund-no/{out_refund_no}` |
+| 跨境分账 | ❌ 不支持 | POST `/v3/global/profit-sharing/orders` 等 |
+| 子商户进件 | XML POST `/secapi/mch/addInstitutionsub` | POST `/v3/global/applyment4sub/applyment/` |
 
 V3 使用 RESTful 设计，URL 更清晰语义化。
 
