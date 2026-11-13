@@ -2,13 +2,13 @@
 
 微信支付为 AI Agent 提供了专业的境外（跨境）接入技能包（Skill），将 WeChat Pay Global 的业务知识、产品选型规则、代码示例导航和接入规范，以 Agent 可理解的方式组织起来，使 Agent 能够准确地协助开发者完成**境外微信支付**的接入工作。
 
-> 💡 **境内 ≠ 境外**：本 Skill 只服务境外接入（域名 `apihk.mch.weixin.qq.com`、路径前缀 `/v3/global/`）。如果你接入的是境内业务，请改用 [`wechatpay-basic-payment`](../wechatpay-basic-payment/SKILL.md)。
+> 💡 **境内 ≠ 境外**：本 Skill 只服务境外接入（域名 `apihk.mch.weixin.qq.com`、路径前缀 `/v3/global/`）。如果你接入的是境内业务，请改用 [`wechatpay-payment-integration`](https://github.com/wechatpay-apiv3/wechatpay-skills/blob/main/wechatpay-payment-integration/SKILL.md)。
 
 ### Skill 列表
 
 | Skill | 说明 |
 | --- | --- |
-| [wechatpay-global-payment](./SKILL.md) | 微信支付境外（跨境）平台全产品接入指引 |
+| [wechatpay-global-payment](./wechatpay-global-payment/SKILL.md) | 微信支付境外（跨境）平台全产品接入指引 |
 
 > 💡 **推荐使用 `wechatpay-global-payment`**：这是微信支付境外接入的统一入口 Skill，覆盖 7 大支付产品 + 跨境分账 / 子商户进件 / 海关报关等扩展能力，支持产品选型、示例代码指引、业务速查、质量评估、答疑排障五大能力，并支持中文、English、日本語、한국어、Français、Español、Português、Русский、العربية **九语言**自适应作答。
 
@@ -23,7 +23,7 @@
 
 ### 多语言支持
 
-本 Skill 支持 **9 种语言**自适应：始终用与用户输入相同的语言回复，业务术语严格遵循内置 [术语表](./references/glossary.md)（19 个分类、336 词条 × 9 语言），技术标识符（字段名、域名、路径、错误码）保持原文不翻译。
+本 Skill 支持 **9 种语言**自适应：始终用与用户输入相同的语言回复，业务术语严格遵循内置 [术语表](./wechatpay-global-payment/references/glossary.md)（19 个分类、336 词条 × 9 语言），技术标识符（字段名、域名、路径、错误码）保持原文不翻译。
 
 | 语言 | 代码 | 语言 | 代码 |
 | --- | --- | --- | --- |

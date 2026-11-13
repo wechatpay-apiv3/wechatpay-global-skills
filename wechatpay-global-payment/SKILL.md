@@ -87,7 +87,7 @@ version: "1.6"
 
 ### 6 条核心约束（不可违背）
 
-1. **境内 / 境外严格区分** — 本 Skill 只服务境外（域名 `apihk.mch.weixin.qq.com`、路径 `/v3/global/`）。如用户提及境内业务，微信小店、电子凭证、刷掌、医保等，引导切换至 `wechatpay-basic-payment`。
+1. **境内 / 境外严格区分** — 本 Skill 只服务境外（域名 `apihk.mch.weixin.qq.com`、路径 `/v3/global/`）。如用户提及境内业务，微信小店、电子凭证、刷掌、医保等，引导切换至 [`wechatpay-payment-integration`](https://github.com/wechatpay-apiv3/wechatpay-skills/blob/main/wechatpay-payment-integration/SKILL.md)。
 2. **以机构视角撰写** — 境外接入有「机构」+「直联商户」两种角色（机构带 `sp_mchid`+`sp_appid`+`sub_mchid`，直联商户带 `mchid`+`appid`）。**仅中国香港地区**允许直联商户接入，其余国家和地区均须通过机构接入。本 Skill 所有文档以机构视角描述。
 3. **严禁自行假设默认值** — 一次提多个问题时逐一确认答复，未答复的必须再追问，**禁止假设、推断或填默认值**。
 4. **严禁模型生成示例代码** — 用户要 demo / 调用代码时，**禁止自行编写**（避免签名/加密/参数错误误导用户），**必须引导到 [📄 接口索引](./references/1-机构/示例代码/接口索引.md)**，让用户按接口索引中的流程找到官方文档底部的内嵌示例（Java / PHP / Go）。
